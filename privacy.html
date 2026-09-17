@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simple IPTV Privacy</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1a1a1a; --muted: #555; --accent: #1f8a4c; }
+  @media (prefers-color-scheme: dark) { :root { --bg: #0e0f12; --fg: #e8e8e8; --muted: #a0a0a0; --accent: #4cc47f; } }
+  body { background: var(--bg); color: var(--fg); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; margin: 0; padding: 0 16px; }
+  main { max-width: 680px; margin: 48px auto; }
+  h2 { margin-top: 32px; font-size: 1.15em; }
+  p.meta { color: var(--muted); }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Privacy policy</h1>
+  <p class="meta">Simple IPTV &middot; last updated 16 September 2026</p>
+
+  <p>Simple IPTV is a personal, non-commercial app. There is no Simple IPTV server, account or
+  analytics service. The developer does not receive, store or see any of your data.</p>
+
+  <h2>What stays on your TV</h2>
+  <p>The playlists and guide addresses you add (including any usernames and passwords for them),
+  your favorites, hidden and reordered channels, watch progress and settings are stored on the
+  device. The app connects directly to the playlist and guide providers you configure, and to
+  GitHub to check for app updates.</p>
+
+  <h2>Google Drive (optional)</h2>
+  <p>If you choose to connect Google Drive, the app asks for two limited permissions:</p>
+  <ul>
+    <li><strong>drive.appdata</strong> &mdash; a hidden folder in your Drive that only this app can
+    use. It holds the sync files that keep your TVs in step.</li>
+    <li><strong>drive.file</strong> &mdash; only files and folders this app creates, such as a
+    visible Simple IPTV backup folder. The app cannot see or change any other file in your Drive.</li>
+  </ul>
+  <p>Sync files are encrypted on the TV with a passphrase you choose before they are uploaded, so
+  they cannot be read without it. Backups are encrypted too when you set a passphrase. This data
+  goes only to your own Google Drive; it is not sent anywhere else, shared, sold, or used for
+  advertising.</p>
+  <p>Simple IPTV's use and transfer of information received from Google APIs adheres to the
+  <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services
+  User Data Policy</a>, including the Limited Use requirements.</p>
+
+  <h2>Removing your data</h2>
+  <p>Disconnecting Google Drive in the app's settings deletes the sign-in token from the TV. You can
+  also revoke access at any time at
+  <a href="https://myaccount.google.com/connections">myaccount.google.com/connections</a>, and
+  delete the hidden sync data from Google Drive's settings under <em>Manage apps</em>. Uninstalling
+  the app removes everything stored on the TV.</p>
+
+  <h2>Contact</h2>
+  <p>Questions: open an issue at
+  <a href="https://github.com/mondo004/simple-iptv-releases/issues">github.com/mondo004/simple-iptv-releases</a>.</p>
+</main>
+</body>
+</html>
