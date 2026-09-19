@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Simple IPTV &mdash; download</title>
+<style>
+  :root { --bg: #ffffff; --fg: #1a1a1a; --muted: #555; --accent: #1f8a4c; --panel: #f4f4f5; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0e0f12; --fg: #e8e8e8; --muted: #a0a0a0; --accent: #4cc47f; --panel: #1a1c21; }
+  }
+  body { background: var(--bg); color: var(--fg); font: 17px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif; margin: 0; padding: 0 16px; }
+  main { max-width: 680px; margin: 48px auto; }
+  h1 { margin-bottom: 4px; }
+  h2 { font-size: 19px; margin-top: 32px; }
+  p.lede { color: var(--muted); margin-top: 0; }
+  a { color: var(--accent); }
+  .url { display: block; background: var(--panel); border-radius: 8px; padding: 14px 16px; margin: 16px 0; font: 600 20px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; word-break: break-all; }
+  table { border-collapse: collapse; margin-top: 8px; }
+  th, td { text-align: left; padding: 4px 16px 4px 0; vertical-align: top; }
+  th { color: var(--muted); font-weight: 400; white-space: nowrap; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; word-break: break-all; }
+  footer { margin-top: 40px; color: var(--muted); font-size: 15px; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Simple IPTV</h1>
+  <p class="lede">Current stable build, for the Downloader app on a Fire TV or Android TV box.</p>
+
+  <p>Open Downloader and enter exactly this:</p>
+  <span class="url">mondo004.github.io/simple-iptv-releases/stable.apk</span>
+  <p>Nothing else needs typing &mdash; no <code>https://</code>, no <code>www</code>. Downloader
+  offers to install as soon as it finishes.</p>
+
+  <h2>What this is</h2>
+  <table>
+    <tr><th>Version</th><td>0.1.2</td></tr>
+    <tr><th>Build</th><td><code>88a73fdbe93e</code></td></tr>
+    <tr><th>Dated</th><td>2026-09-18</td></tr>
+    <tr><th>Size</th><td>10.1 MB</td></tr>
+    <tr><th>Change</th><td>Stop a refresh blanking the Live TV category rail</td></tr>
+    <tr><th>SHA-256</th><td><code>442f3b33c2c710269a0da2e406c3810e4ce1e85270a5730cc8e90349b5967069</code></td></tr>
+  </table>
+  <p>These are the same bytes as the
+  <a href="https://github.com/mondo004/simple-iptv-releases/releases/latest">latest release</a>,
+  copied here so the download needs no redirect. Verify with
+  <code>sha256sum -c stable.sha256</code>.</p>
+
+  <h2>Installing with a computer instead</h2>
+  <p>A plain install leaves the app interpreted and slow to start on weak TV hardware. If you have
+  adb, install the profile alongside it:</p>
+  <p><code>adb install-multiple -r stable.apk stable.dm</code></p>
+  <p>Use <code>stable-api28.dm</code> instead on Android 9&ndash;11, which is every Fire TV stick;
+  rename it to <code>stable.dm</code> first, since adb pairs the two by filename. Downloader
+  installs a single file and cannot carry either one.</p>
+
+  <footer>
+    Updated whenever a build is promoted to stable. Test builds are not mirrored here.
+    &middot; <a href="index.html">About</a>
+    &middot; <a href="privacy.html">Privacy policy</a>
+  </footer>
+</main>
+</body>
+</html>

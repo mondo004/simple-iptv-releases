@@ -1,0 +1,5 @@
+# The APK and the dex-metadata files are committed here to be served verbatim by GitHub Pages.
+# Marked binary explicitly because this repo is also written to from a Windows checkout, where an
+# autocrlf misdetection would corrupt them in a way that only shows up as a failed install on a TV.
+*.apk binary
+*.dm binary
